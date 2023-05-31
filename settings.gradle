@@ -1,0 +1,5 @@
+rootProject.name = 'harunote'
+include 'app-api'
+include 'web-api'
+include 'admin-api'
+include 'core'
