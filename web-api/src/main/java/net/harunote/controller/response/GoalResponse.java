@@ -1,4 +1,4 @@
-package net.harunote.controller.request;
+package net.harunote.controller.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.Accessors;
+import net.harunote.goal.enums.GoalType;
 
 import java.time.LocalDateTime;
 

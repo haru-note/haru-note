@@ -16,21 +16,21 @@ public class ModelMapConverter {
         this.modelMapper = modelMapper;
     }
 
-    public <S, D> D convertToDto(S entity, Class<D> dto) {
+    public <S, D> D toDto(S entity, Class<D> dto) {
         return modelMapper.map(entity, dto);
     }
 
-    public <S, D> D convertToEntity(S dto, Class<D> entity) {
+    public <S, D> D toEntity(S dto, Class<D> entity) {
         return modelMapper.map(dto, entity);
     }
 
-    public <S, D> List<D> convertListToDto(List<S> sourceList, Class<D> destinationType) {
+    public <S, D> List<D> listToDto(List<S> sourceList, Class<D> destinationType) {
         return sourceList.stream()
                 .map(source -> modelMapper.map(source, destinationType))
                 .collect(Collectors.toList());
     }
 
-    public <S, D> List<D> convertListToEntity(List<S> sourceList, Class<D> destinationType) {
+    public <S, D> List<D> listToEntity(List<S> sourceList, Class<D> destinationType) {
         return sourceList.stream()
                 .map(source -> modelMapper.map(source, destinationType))
                 .collect(Collectors.toList());

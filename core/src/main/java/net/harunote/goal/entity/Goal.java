@@ -30,6 +30,7 @@ public class Goal extends CommonEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long goalId;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "type", columnDefinition = "varchar(50)", nullable = false)
     private GoalType type;
 
